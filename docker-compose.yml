@@ -1,0 +1,14 @@
+version: '3'
+services:
+  frontend:
+    build: frontend/
+    restart: on-failure
+    volumes:
+      # TODO Figure out something more sensible
+      # - /Users/phb514/custom_software/parse_textgrids/output:/opt/output
+      # OUTPUT_VOLUME_PATH=/Users/phb514/custom_software/parse_textgrids/output docker-compose ....
+      - $OUTPUT_VOLUME_PATH:/opt/output
+    #network_mode: "host"
+    ports:
+      # <host port>:<docker port>! 5000: Flask app default port
+      - "5005:5000"
