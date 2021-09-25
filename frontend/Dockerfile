@@ -7,6 +7,7 @@ RUN apt-get update && \
     python3 \
     python3-pip \
     sqlite3 \
+    mysql-client \
     git \
     vim \
     curl \
